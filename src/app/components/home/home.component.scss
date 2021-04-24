@@ -1,0 +1,55 @@
+.content {
+    display: grid;
+    grid-template-rows: 40% 1fr;
+    height: 100vh;
+    .title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #457b7b;
+    }
+}
+:host::ng-deep {
+    .search {
+        .searchInput {
+            text-align: center;
+            .search {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                margin: 1% 0;
+                flex-wrap: wrap;
+                .forErrMessage {
+                    width: 100%;
+                    margin-top: 10px;
+                    height: 20px;
+                    .errMessage {
+                        .message {
+                            margin: 0;
+                        }
+                    }
+                }
+                .input {
+                    width: 30%;
+                }
+            }
+            .forButton{
+                .button {
+                    background-color: #325d5d;
+                    box-shadow: 0 2px 8px black;
+                    border: none;
+                    width: 8%;
+                }
+                .button:focus {
+                    box-shadow: none;
+                }
+                .button:disabled {
+                    box-shadow: none;
+                }
+                .button:enabled:hover {
+                    background-color: #598d8d;
+                }
+            }
+        }
+    }
+}

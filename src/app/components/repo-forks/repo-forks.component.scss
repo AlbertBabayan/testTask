@@ -1,0 +1,94 @@
+:host::ng-deep {
+    .searchInput {
+        display: flex;
+        justify-content: center;
+        .search {
+            width: 50%;
+            margin: 0 5px;
+            .forErrMessage {
+                width: 100%;
+                margin-top: 10px;
+                height: 20px;
+                .errMessage {
+                    text-align: center;
+                    height: 50px;
+                }
+            }
+        }
+        .forButton {
+            .button {
+                background-color: #325d5d;
+                box-shadow: 0 2px 8px black;
+                border: none;
+                margin: 0 5px;
+            }
+            .button:focus {
+                box-shadow: none;
+            }
+            .button:disabled {
+                box-shadow: none;
+            }
+            .button:enabled:hover {
+                background-color: #598d8d;
+            }
+        }
+    }
+    .ngPagination {
+        ngb-pagination {
+            .pagination {
+                .page-item {
+                    .page-link {
+                        background-color: #c1c1c1;
+                        color: #6f6388;;
+                    }
+                    .page-link {
+                        box-shadow: none;
+                    }
+                }
+                .active {
+                    .page-link {
+                        background: #325d5d;
+                        color: white;
+                    }
+                    .page-link:focus {
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+    }
+    .custom-select {
+        cursor: pointer;
+        color: #6f6388;;
+        background: #c1c1c1;
+    }
+    .custom-select:focus{
+        box-shadow: none;
+    }
+}
+tr {
+    height: 50px;
+}
+.wrapper {
+    display: grid;
+    grid-template-rows: 15% 1fr 70px;
+    height: 100vh;
+    .search {
+        display: flex;
+        justify-content: center;
+        padding: 3%;
+        .repoName {
+            text-align: center;
+            color: #325d5d;
+        }
+    }
+    .forksList{
+        .header{
+            color: #6f6388;
+        }
+    }
+}
+.cdk-virtual-scroll-viewport.scroller {
+    width: 100%;
+    height: 100%;
+}

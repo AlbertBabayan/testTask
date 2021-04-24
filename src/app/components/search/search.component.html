@@ -1,0 +1,14 @@
+<div class="searchInput" [formGroup]="searchForm">
+    <div class="search">
+        <input id="typeahead-basic" type="text" class="form-control input" formControlName="ownerAndRepoName">
+        <div class="forErrMessage">
+            <div *ngIf="searchForm.get('ownerAndRepoName').errors as errors" class="text-danger errMessage">
+                <p class="message" *ngIf="errors.nameFormat">{{errors.nameFormat.message}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="forButton">
+        <button [disabled]="searchForm.invalid" (click)="onSearch()" type="submit"
+            class="btn btn-primary button">Search</button>
+    </div>
+</div>
